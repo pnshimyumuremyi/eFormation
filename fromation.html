@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Demande de Formation</title>
+    <link rel="stylesheet" href="formation.css">
+</head>
+<body>
+    <h1>Formulaire de Demande de Formation</h1>
+    <form id="trainingRequestForm">
+        <div class="form-group">
+            <label for="employeeName">Nom de l'employé.e: </label>
+            <select id="employeeName" name="employeeName">
+                <option value="">Sélectionnez un nom</option>
+                <option value="Arold Tiajio">Arold Tiajio</option>
+                <option value="Autre">Autre</option>
+            </select>
+            <span class="error-message" id="employeeNameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="gestionaire">Nom du gestionaire: </label>
+            <select id="gestionaire" name="gestionaire">
+                <option value="">Sélectionnez un gestionaire</option>
+                <option value="Chantal Bergevin">Chantal Bergevin</option>
+                <option value="Autre">Autre</option>
+            </select>
+            <span class="error-message" id="gestionaireError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="provider">Fournisseur tierce partie: </label>
+            <input type="text" id="provider" name="provider">
+            <span class="error-message" id="providerError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="courseCode">Code du cours: </label>
+            <input type="text" id="courseCode" name="courseCode">
+            <span class="error-message" id="courseCodeError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="courseTitle">Titre du cours: </label>
+            <input type="text" id="courseTitle" name="courseTitle">
+            <span class="error-message" id="courseTitleError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="deadline">Date limite d'inscription: </label>
+            <input type="date" id="deadline" name="deadline">
+            <span class="error-message" id="deadlineError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Catégorie: </label>
+            <select id="category" name="category">
+                <option value="">Sélectionnez une catégorie</option>
+                <option value="gestion_projet">Gestion de Projet</option>
+                <option value="informatique">Informatique</option>
+                <option value="ressources_humaines">Gestion des Ressources Humaines</option>
+            </select>
+            <span class="error-message" id="categoryError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="modality">Modalité pédagogique: </label>
+            <select id="modality" name="modality">
+                <option value="">Sélectionnez une modalité</option>
+                <option value="en_personne">En personne</option>
+                <option value="classe_virtuelle">Salle de classe virtuelle</option>
+                <option value="apprentissage_virtuel">Apprentissage virtuel à son rythme</option>
+            </select>
+            <span class="error-message" id="modalityError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="language">Langue du cours: </label>
+            <select id="language" name="language">
+                <option value="">Sélectionnez une langue</option>
+                <option value="anglais">Anglais</option>
+                <option value="francais">Français</option>
+            </select>
+            <span class="error-message" id="languageError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="duration">Durée du cours (en heures): </label>
+            <input type="number" id="duration" name="duration">
+            <span class="error-message" id="durationError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="fees">Frais du cours (CAD): </label>
+            <input type="number" id="fees" name="fees">
+            <span class="error-message" id="feesError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="startDate">Date de début du cours: </label>
+            <input type="date" id="startDate" name="startDate">
+            <span class="error-message" id="startDateError"></span>
+        </div>
+
+        <button type="submit">Soumettre</button>
+        <button type="reset">Annuler</button>
+    </form>
+
+    <div id="successMessage" class="success-message" style="display: none;">
+        Votre demande de formation a été soumise avec succès.
+    </div>
+
+    <script src="formation.js"></script>
+</body>
+</html>
